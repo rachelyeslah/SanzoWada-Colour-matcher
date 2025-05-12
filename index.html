@@ -19,6 +19,8 @@
                 <button id="capture">Capture Color</button>
             </div>
         </div>
+        <div class="scroll-indicator"></div>
+        <div class="back-to-top" id="backToTop"></div>
         
         <div class="color-display">
             <div id="colorDisplay"></div>
@@ -39,5 +41,25 @@
         window.colorData = colorData;
     </script>
     <script src="app.js"></script>
+
+    <script>
+        // Back to top functionality
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > window.innerHeight * 0.5) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html> 
