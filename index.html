@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' blob:; media-src 'self' blob:;">
+    <title>Sanzo Wada Color Matcher</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sanzo Wada Color Matcher</h1>
+        
+        <div class="camera-container">
+            <video id="video" autoplay playsinline></video>
+            <div id="analyze-box"></div>
+            <canvas id="canvas" style="display: none;"></canvas>
+            <div class="controls">
+                <button id="capture">Capture Color</button>
+            </div>
+        </div>
+        
+        <div class="color-display">
+            <div id="colorDisplay"></div>
+        </div>
+        
+        <div class="matches-container">
+            <div id="matches"></div>
+        </div>
+    </div>
+    
+    <script>
+        // Make colorData available globally
+        window.colorData = null;
+    </script>
+    <script src="color-data.js"></script>
+    <script>
+        // Initialize colorData after it's loaded
+        window.colorData = colorData;
+    </script>
+    <script src="app.js"></script>
+</body>
+</html> 

@@ -1,0 +1,13 @@
+{
+  "name": "color-palette-finder",
+  "version": "1.0.0",
+  "description": "Mobile Color Palette Finder App",
+  "main": "app.js",
+  "scripts": {
+    "start": "npx http-server -p 3000 --host 0.0.0.0 --cors",
+    "fetch-colors": "node fetch-colors.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.7"
+  }
+} 
